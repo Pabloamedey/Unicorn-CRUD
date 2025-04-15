@@ -9,7 +9,6 @@ const UnicornsView = ({
     handleAddUnicorn,
     handleEditUnicorn,
     handleDeleteUnicorn,
-    handleGetUnicorns,
     unicorns,
 }) => {
     const [name, setName] = useState("");

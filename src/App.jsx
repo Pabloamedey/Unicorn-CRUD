@@ -1,12 +1,16 @@
 import { Routes, Route, Navigate } from "react-router-dom";
-import UnicornsContainer from "./unicorns";
+import UnicornsContainer from "./layouts/unicorns";
+import { UnicornProvider } from "./context/UnicornContext";
+
 
 function App() {
   return (
-    <Routes>
-      <Route path="/" element={<Navigate to="/unicornios" />} />
-      <Route path="/unicornios" element={<UnicornsContainer />} />
-    </Routes>
+    <UnicornProvider>
+      <Routes>
+        <Route path="/" element={<Navigate to="/unicornios" />} />
+        <Route path="/unicornios" element={<UnicornsContainer />} />
+      </Routes>
+    </UnicornProvider>
   );
 }
 

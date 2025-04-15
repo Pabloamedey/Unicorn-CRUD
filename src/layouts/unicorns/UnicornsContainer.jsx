@@ -1,5 +1,6 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useContext } from "react";
 import UnicornsView from "./UnicornsView";
+import { UnicornContext } from "../../context/UnicornContext";
 
 const API_URL = "https://crudcrud.com/api/4e22aa362d6a43f291d49d99ea9f6a39/unicorns";
 
@@ -19,6 +20,8 @@ const UnicornsContainer = () => {
                 alert("Error al obtener los unicornios.");
             });
     };
+
+    const {unicorns, getUnicorns} = useContext(UnicornContext)
 
     const handleAddUnicorn = ({ name, color, age, power }) => {
         fetch(API_URL, {
