@@ -70,10 +70,6 @@ npm install
 npm run dev
 ```
 4. Asegúrate de tener un endpoint único de `crudcrud.com` y reemplazarlo en `UnicornsContainer.jsx`
-
-## 🐙 GitHub y Entrega
-Subí el proyecto a un repositorio público en GitHub y compartí el enlace con el docente.
-
 ---
 
 ## ✨ Extras (Puntos Opcionales)
