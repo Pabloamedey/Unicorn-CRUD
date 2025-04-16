@@ -36,7 +36,12 @@ const UnicornsContainer = () => {
                 },
             }),
         })
-            .then((response) => response.json())
+            .then((response) => {
+                if (!response.ok) {
+                    throw new Error("Error al crear el unicornio");
+                }
+                return response.json();
+            })
             .then((data) => {
                 setUnicorns([...unicorns, data]);
             })
